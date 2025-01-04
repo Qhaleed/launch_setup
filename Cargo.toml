@@ -1,0 +1,8 @@
+[package]
+name = "launch_setup"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+opener = "0.7.2"
+webbrowser = "1.0.3"
