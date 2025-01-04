@@ -1,6 +1,3 @@
-
-// use std::process::Command;
-use webbrowser;
 use opener;
 fn main () {
 
@@ -21,18 +18,9 @@ fn main () {
 //     }
 // }
 
-fn open_vscode() {
-    let directory = "C:\\Users\\Qhal\\Desktop\\CS\\Personal\\Rust";  // Replace this with the directory you want to open
-    let vscode_path = "C:\\Users\\Qhal\\AppData\\Local\\Programs\\Microsoft VS Code\\code.exe";
-    let command = format!("\"{}\" \"{}\"", vscode_path, directory);
-
-    // Open VS Code with the specified directory
-    let _vscode = std::process::Command::new("cmd")
-        .args(&["/C", &command])  // Use a slice here
-        .spawn()
-        .expect("Failed to open VS Code");
+fn open_vscode () {
+    let _vscode = opener::open("C:\\Users\\Qhal\\AppData\\Local\\Programs\\Microsoft VS Code\\code.exe");
 }
-
 
 fn open_spotify () {
     println!("Open Spotify");
